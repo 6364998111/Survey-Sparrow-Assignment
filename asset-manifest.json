@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Survey-Sparrow-Assignment/static/css/main.0f3ee60d.css",
+    "main.js": "/Survey-Sparrow-Assignment/static/js/main.a283fecf.js",
+    "index.html": "/Survey-Sparrow-Assignment/index.html",
+    "main.0f3ee60d.css.map": "/Survey-Sparrow-Assignment/static/css/main.0f3ee60d.css.map",
+    "main.a283fecf.js.map": "/Survey-Sparrow-Assignment/static/js/main.a283fecf.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f3ee60d.css",
+    "static/js/main.a283fecf.js"
+  ]
+}
