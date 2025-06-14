@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import dayjs from 'dayjs';
+import CalendarGrid from './components/CalendarGrid';
+import Header from './components/Header';
+import events from './data/events.json';
 
 function App() {
+  const [date, setDate] = useState(dayjs());
+
+  const handlePrevMonth = () => setDate(date.subtract(1, 'month'));
+  const handleNextMonth = () => setDate(date.add(1, 'month'));
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-h-screen bg-slate-100 p-6">
+      <div className="max-w-5xl mx-auto bg-white shadow-lg rounded-xl p-5">
+        <Header date={date} onPrev={handlePrevMonth} onNext={handleNextMonth} />
+        <CalendarGrid date={date} events={events} />
+      </div>
     </div>
   );
 }
